@@ -2,56 +2,69 @@
   var $ = require('jquery');
   var _ = require('underscore');
   var handlebars = require ('handlebars');
+  var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=yarn&includes=Images,Shop";
+  var source = $('#individualProduct').html();          //grabs all the html within my "stamp"
+  var template = handlebars.compile(source);      //converted HTML to template function that we can call however many times!
 
 // console.log(handlebars.VERSION);
 
+function init(data){                              //This is the initial point of entry
+  var products = data.results;
+  // console.log(data);
+  listOfProducts(products);
+}
+
+fetchJSONP(url, init);
+
+
+function listOfProducts(listOfProducts){           //loops over all the products
+  listOfProducts.forEach(function(product){
+  displayProduct(product)
+  // console.log(product);
+})
+}
+
+function displayProduct(product){                  //this builds template for each product
+  console.log(product);
+}
 
 
 
-
-
-
-
-//
-//   var source = $('#photo-album').html();          //grabs all the html within my "stamp"
-//   var template = handlebars.compile(source);      //converted HTML to template function that we can call however many times!
-//
-//
-//
-// // STEP 2: call the function with a context object
-// //Note: the object properties should match the template placeholders
-//
-//   var context = {
-//     'title': 'Cat Album',     //Property name matches placeholder name
-//     'albumNumber': '11',
-//     'image': 'http://unsplash.it/200/200',
-//     'photos': [{'photoTitle': 'Fluffy'}, {'photoTitle': 'Brown'}, {'photoTitle': 'Black'}]
-//   }
-//
-//   $('#album-container').html(template(context));
-//   // $('#album-container').append(template());   //prepend puts stuff in the beginning
-//
-//
-//
-// //Got an array?
-//   var albums = [
+// var products = [
 //     {
-//       'title': 'Cat Album',     //Property name matches placeholder name
-//       'albumNumber': '11',
-//       'image': 'http://unsplash.it/200/200',
-//       ifFav: true,
-//       'photos' : [{'photoTitle': 'Fluffy'}, {'photoTitle': 'Brown'}, {'photoTitle': 'Black'}]
-//     },{
-//       'title': 'Dog Album',     //Property name matches placeholder name
-//       'albumNumber': '234',
-//       'image': 'http://unsplash.it/201/201',
-//       'photos' : [{'photoTitle': 'Fluffy'}, {'photoTitle': 'Brown'}, {'photoTitle': 'Black'}]
-//     }
+//
 //   ];
 //
-//   _.each(albums, function(album){
-//     $('#album-container').append(template(album));   //individual album that you grabbed out
+//   _.each(products, function(product){
+//     $('#product-container').append(template(product));   //individual album that you grabbed out
 //   })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
   (url: String, callback: Function) -> undefined
@@ -75,15 +88,6 @@ var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbt
 */
 
 
-
-var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=yarn&includes=Images,Shop";
-
-function init(data){
-  console.log(data);
-  displayproducts();
-}
-
-fetchJSONP(url, init);
 
 
 

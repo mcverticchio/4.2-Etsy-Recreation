@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-  <head>
+  <head >
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>4 2 Etsy Recreation</title>
@@ -8,12 +8,78 @@
   </head>
 
   <body>
+    <div ="container">
 
-    <header>
-      <h1>Etsy</h1>
-      <hr>
+    <div class="row">
 
-    </header>
+      <header class="col-md-12">
+        <h1>Etsy</h1>
+        <h3></h3>
+      </header>
+
+      <body class="col-md-12">
+
+
+        <div class="leftSection">
+              <div class="col-md-2">
+
+                <div class="">Show results for:
+                </div>
+
+                <div class="">
+                  <ul>
+                    <li>All categories</li>
+                    <li>Craft Supplies &amp; Tools</li>
+                    <li>Fiber &amp; Textile Art Supplies</li>
+                    <li>Yarn &amp; Roving</li>
+                    <ul> Yarn
+                      <li>Fingering</li>
+                      <li>Worsted &amp; Aran</li>
+                      <li>Sock</li>
+                      <li>DK</li>
+                      <li>Lace, Thread &amp; Cobweb</li>
+                      <li>Bulky</li>
+                      <li>Art Yarn</li>
+                      <li>Super Bulky &amp; Chunky</li>
+                      <li>Sport</li>
+                      <li>Novelty</li>
+                      <li>Heavy Worsted</li>
+                    </ul>
+                  </ul>
+                </div>
+
+                <div class="">
+                  Refine your search
+                </div>
+              </div>
+          </div>
+
+
+
+
+          <div id="album-container" class="col-md-10">
+
+          </div>
+
+          <script id="individualProduct" type ="text/x-handlebars-template">
+            <div class="col-md-10">
+            <img src="{{image}}" alt="" />
+            <h2>{{seller}} {{title}} {{price}}</h2>
+          </div>
+         </script>
+
+
+
+        <script src="js/bundle.js"></script>
+      </body>
+
+
+    </div>
+  </div>
+</html>
+
+
+
 
     <!-- <div class="container">
       <div id="album-container" class="row">
@@ -40,7 +106,3 @@
         </ul>
     </div>
     <! </script> -->
-
-    <script src="js/bundle.js"></script>
-  </body>
-</html>

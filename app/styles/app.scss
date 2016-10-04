@@ -17,7 +17,11 @@ img {
 }
 
 header {
-  height: 125px;
-  background: orange;
-  margin-top: 0px;
+  margin-bottom: 10px;
+  h1{
+    height: 125px;
+    border-bottom: 1px solid black;
+    font-family: "Graphik Web";
+    color: #f45800;
+  }
 }
