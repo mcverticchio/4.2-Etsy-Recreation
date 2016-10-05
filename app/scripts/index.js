@@ -1,47 +1,74 @@
 // // console.log("Hello World!");
   var $ = require('jquery');
   var _ = require('underscore');
-  var handlebars = require ('handlebars');
+  var Handlebars = require ('handlebars');
   var url = "https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=yarn&includes=Images,Shop";
-  var source = $('#individualProduct').html();          //grabs all the html within my "stamp"
-  var template = handlebars.compile(source);      //converted HTML to template function that we can call however many times!
 
 // console.log(handlebars.VERSION);
 
-function init(data){                              //This is the initial point of entry
+
+//This is the initial point of entry
+// function init(data){
+//   var products = data.results;
+//   // console.log(data);
+//   listOfProducts(products);
+// }
+//
+// fetchJSONP(url, init);
+
+
+fetchJSONP(url, function(data){
   var products = data.results;
-  // console.log(data);
   listOfProducts(products);
-}
 
-fetchJSONP(url, init);
-
-
-function listOfProducts(listOfProducts){           //loops over all the products
-  listOfProducts.forEach(function(product){
-  displayProduct(product)
-  // console.log(product);
 })
-}
 
-function displayProduct(product){                  //this builds template for each product
+
+//loops over all the products
+function listOfProducts(loopProducts){
+  var source = $('#individualProduct').html();          //grabs all the html within my "stamp"
+  var template = Handlebars.compile(source);      //converts HTML to template function that we can call however many times!
+
+  loopProducts.forEach(function(product){
+  // console.log(product);
+  var productHTML = $(template(product));
+  $('#product-container').append(productHTML);
+  // $('.product-container').append(template(product));  -->> class way..
   console.log(product);
-//     var title = product.title;
-//     var img = product.img[0];
-//     console.log(title);
-//     console.log(img);
-  // displayProduct.forEach(function(product){
+  });
+};
+// function listOfProducts(loopProducts){
+// products.forEach(function(product)){
+//   var productHTML = $(template(product));
+// context = {
+//   'itemImageUrl' : product.Images[0].url_75x75,
+//   'itemTitle' : product.title,
+//   'productSeller' : product.Shop.shop_name,
+//   'productCost' : product.price
+// };
+// // console.log(products);
+// $('#products-container').append(template(context));
+// });
+// }
 
-  }
-  // _.each(products, function(product){
-    //   $('#product-container').append(template(product));   //individual album that you grabbed out
-    //  })
 
 
 
 
 
 
+//this builds template for each product
+// function displayProduct(product){
+//
+// }
+
+
+
+
+
+  // _.each(product, function(product){
+  //     $('#product-container').append(template(product));   //individual album that you grabbed out
+  //    })
 
 // var products = [
 //     {
