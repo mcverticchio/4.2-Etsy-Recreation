@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>4 2 Etsy Recreation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/app.css">
   </head>
 
@@ -14,17 +15,47 @@
 
       <header class="col-md-12">
         <h1>Etsy</h1>
-        <h3></h3>
+        <form>
+          <input id="searchInput" type="search" placeholder="Search for items or shops"><input id="searchButton" type="button" value="Search"></input>
+        </form>
+        <nav <class="topNavBar">
+        <span>Sell on Etsy</span>
+        <span>Register</span>
+        <span>Sign in</span>
+        <span><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</span>
+      </nav>
+      <hr>
+      <ul>
+        <li><a href="">Clothing &amp; Accessories</a></li>
+        <li><a href="">Jewelry</a></li>
+        <li><a href="">Craft Supplies &amp; Tools</a></li>
+        <li><a href="">Weddings</a></li>
+        <li><a href="">Entertainment</a></li>
+        <li><a href="">Home &amp; Living</a></li>
+        <li><a href="">Kids &amp; Baby</a></li>
+        <li><a href="">Vintage</a></li>
+      </ul>
       </header>
 
       <body class="col-md-12">
 
-
+        <div class="locationSection">
+          <div class="col-md-12">
+            <span>Show results for:</span>
+            <ul>
+              <li>All categories</li>
+              <li>Craft Supplies &amp; Tools</li>
+              <li>Fiber &amp; Textile Art Supplies</li>
+              <li>Yarn &amp; Roving</li>
+              <li>Yarn</li>
+              <li>"yarn" (91,142 Results)</li>
+            </ul>
+            <span>Sort by: Relevancy</span>
+          </div>
+        </div>
         <div class="leftSection">
               <div class="col-md-2">
 
-                <div class="">Show results for:
-                </div>
 
                 <div class="">
                   <ul>
@@ -32,7 +63,8 @@
                     <li>Craft Supplies &amp; Tools</li>
                     <li>Fiber &amp; Textile Art Supplies</li>
                     <li>Yarn &amp; Roving</li>
-                    <ul> Yarn
+                    <ul>
+                      <li>Yarn</li>
                       <li>Fingering</li>
                       <li>Worsted &amp; Aran</li>
                       <li>Sock</li>
@@ -51,22 +83,96 @@
                 <div class="">
                   Refine your search
                 </div>
+
+
+                <div class="">
+
+                  <ul>
+                    <li>Shop Location</li>
+                    <li>Anywhere</li>
+                    <li>United States</li>
+                    <li>Choose a custom location</li>
+                  </ul>
+
+                  <ul>
+                    <li>Item type</li>
+                    <li>All items</li>
+                    <li>Handmade</li>
+                    <li>Vintage</li>
+                  </ul>
+
+                  <ul>
+                    <li>Price ($)</li>
+                    <li>Any price</li>
+                    <li>Under $25</li>
+                    <li>$25 to $50</li>
+                    <li>$50 to $100</li>
+                    <li>Over $100</li>
+                  </ul>
+
+                </div>
               </div>
           </div>
 
 
 
 
-          <div id="album-container" class="col-md-10">
+          <div id="product-container" class="col-md-10">
 
           </div>
 
           <script id="individualProduct" type ="text/x-handlebars-template">
-            <div class="col-md-10">
+            <div class="col-md-3">
             <img src="{{image}}" alt="" />
             <h2>{{seller}} {{title}} {{price}}</h2>
           </div>
          </script>
+
+
+         <div class="col-md-5">
+           <div class="col-md-4">
+              <ul>
+                <li>Related to yarn</li>
+                <li>hand dyed yarn</li>
+                <li>chunky yarn</li>
+                <li>yarn bowl</li>
+                <li>sock yarn</li>
+              </ul>
+
+
+           </div>
+           <div class="col-md-4">
+             <ul>
+              <li>wool yarn</li>
+              <li>cotton yarn</li>
+              <li>bulky yarn</li>
+              <li>gradient yarn</li>
+            </ul>
+
+           </div>
+           <div class="col-md-4">
+             <ul>
+              <li>yarn hand dyed</li>
+              <li>knitting needles</li>
+            </ul>
+           </div>
+
+           <div>
+              <span>Looking for shops?
+                <a href="">yarningsbyseanna</a>,
+                <a href="">Yarntopia Treasures</a>,
+                <a href="">aVividYarnStudio</a>.
+                <a href="">See more</a>.
+              </span>
+           </div>
+
+
+
+
+
+         </div>
+
+
 
 
 

@@ -26,7 +26,20 @@ function listOfProducts(listOfProducts){           //loops over all the products
 
 function displayProduct(product){                  //this builds template for each product
   console.log(product);
-}
+//     var title = product.title;
+//     var img = product.img[0];
+//     console.log(title);
+//     console.log(img);
+  // displayProduct.forEach(function(product){
+
+  }
+  // _.each(products, function(product){
+    //   $('#product-container').append(template(product));   //individual album that you grabbed out
+    //  })
+
+
+
+
 
 
 
