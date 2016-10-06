@@ -37,6 +37,8 @@ function listOfProducts(loopProducts){
   console.log(product);
   });
 };
+
+// CAN ALSO DO IT THIS WAY:  MAKE SURE THE CONTEXT ITEM NAME MATCHES IN HTML
 // function listOfProducts(loopProducts){
 // products.forEach(function(product)){
 //   var productHTML = $(template(product));
@@ -46,59 +48,9 @@ function listOfProducts(loopProducts){
 //   'productSeller' : product.Shop.shop_name,
 //   'productCost' : product.price
 // };
-// // console.log(products);
 // $('#products-container').append(template(context));
 // });
 // }
-
-
-
-
-
-
-
-//this builds template for each product
-// function displayProduct(product){
-//
-// }
-
-
-
-
-
-  // _.each(product, function(product){
-  //     $('#product-container').append(template(product));   //individual album that you grabbed out
-  //    })
-
-// var products = [
-//     {
-//
-//   ];
-//
-//   _.each(products, function(product){
-//     $('#product-container').append(template(product));   //individual album that you grabbed out
-//   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
