@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+  <head >
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4 2 Etsy Recreation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+
+
+        <header class="col-md-12">
+          <h1>Etsy</h1>
+          <form>
+            <input id="searchInput" type="search" placeholder="Search for items or shops"><input id="searchButton" type="button" value="Search"></input>
+          </form>
+          <nav <class="topNavBar">
+            <span>Sell on Etsy</span>
+            <span>Register</span>
+            <span>Sign in</span>
+            <span><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</span>
+          </nav>
+          <hr>
+          <ul>
+            <li><a href="">Clothing &amp; Accessories</a></li>
+            <li><a href="">Jewelry</a></li>
+            <li><a href="">Craft Supplies &amp; Tools</a></li>
+            <li><a href="">Weddings</a></li>
+            <li><a href="">Entertainment</a></li>
+            <li><a href="">Home &amp; Living</a></li>
+            <li><a href="">Kids &amp; Baby</a></li>
+            <li><a href="">Vintage</a></li>
+          </ul>
+        </header>
+
+        <div class="bottom">
+          <div class="row">
+            <div class="leftSection">
+            <div class="col-md-2">
+
+              <span>Show results for:</span>
+
+
+              <ul class="firstBox">
+                <div class="blueArrows">
+                <li>All categories</li>
+                <li>Craft Supplies &amp; Tools</li>
+                <li>Fiber &amp; Textile Art Supplies</li>
+                <li>Yarn &amp; Roving</li>
+                </div>
+                  <ul>
+                    <li class="yarn">Yarn</li>
+                    <div class="indent">
+                    <li> Fingering</li>
+                    <li>Worsted &amp; Aran</li>
+                    <li>Sock</li>
+                    <li>DK</li>
+                    <li>Lace, Thread &amp; Cobweb</li>
+                    <li>Bulky</li>
+                    <li>Art Yarn</li>
+                    <li>Super Bulky &amp; Chunky</li>
+                    <li>Sport</li>
+                    <li>Novelty</li>
+                    <li>Heavy Worsted</li>
+                  </div>
+                  </ul>
+              </ul>
+
+
+            <span class="refine">Refine your search</span>
+
+            <div class="secondBox">
+              <ul>
+                <li>Shop Location</li>
+                <li>Anywhere</li>
+                <li>United States</li>
+                <li>Choose a custom location</li>
+              </ul>
+                <hr>
+              <ul>
+                <li>Item type</li>
+                <li>All items</li>
+                <li>Handmade</li>
+                <li>Vintage</li>
+              </ul>
+                <hr>
+              <ul>
+                <li>Price ($)</li>
+                <li>Any price</li>
+                <li>Under $25</li>
+                <li>$25 to $50</li>
+                <li>$50 to $100</li>
+                <li>Over $100</li>
+              </ul>
+
+                  <form>
+                    <input type="search" placeholder="Low">
+                    <span>to</span>
+                    <input type="search" placeholder="High">
+                  </form>
+
+                  <hr>
+
+                  <span class="filter">Filter by color</span>
+                  <div class="colors">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  </div>
+
+                <hr>
+
+                <div class="orderingOptions">
+                  <span class="firstSpan">Ordering options</span>
+                  <span><div></div>Accepts Etsy gift cards</span>
+                  <span><div></div>Customizable</span>
+                </div>
+
+                <hr>
+
+                <div class="shipTo">
+                  <span>Ship to</span>
+                  <form action>
+
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+
+          <div class="col-md-10">
+          <div class="rightSection">
+          <ul>
+            <li>All categories</li>
+            <li>Craft Supplies &amp; Tools</li>
+            <li>Fiber &amp; Textile Art Supplies</li>
+            <li>Yarn &amp; Roving</li>
+            <li>Yarn</li>
+            <li>"yarn" (91,142 Results)</li>
+          </ul>
+          <span class="sorter">Sort by: Relevancy</span>
+
+
+
+          <div id="product-container">
+            <!--Handlebars template -->
+          </div>
+
+
+          <script id="individualProduct" type ="text/x-handlebars-template">
+
+            <div class="col-md-3">
+            <div class="image-container">
+              <img src="{{Images.0.url_75x75}}" alt="" />
+            </div>
+            <div class="imageFooter">
+              <h6>{{title}}</h6>
+              <h6>$ {{price}}</h6>
+              <h6>{{Shop.shop_name}}</h6>
+            </div>
+          </div>
+
+         </script>
+
+
+         <div class="col-md-5">
+           <div class="col-md-4">
+              <ul>
+                <li>Related to yarn</li>
+                <li>hand dyed yarn</li>
+                <li>chunky yarn</li>
+                <li>yarn bowl</li>
+                <li>sock yarn</li>
+              </ul>
+
+
+           </div>
+           <div class="col-md-4">
+             <ul>
+              <li>wool yarn</li>
+              <li>cotton yarn</li>
+              <li>bulky yarn</li>
+              <li>gradient yarn</li>
+            </ul>
+
+           </div>
+           <div class="col-md-4">
+             <ul>
+              <li>yarn hand dyed</li>
+              <li>knitting needles</li>
+            </ul>
+           </div>
+
+           <div>
+              <span>Looking for shops?
+                <a href="">yarningsbyseanna</a>,
+                <a href="">Yarntopia Treasures</a>,
+                <a href="">aVividYarnStudio</a>.
+                <a href="">See more</a>.
+              </span>
+           </div>
+
+         </div>
+        </div>
+
+
+
+</div>
+         </div>
+      </div>
+
+
+
+
+        <script src="js/bundle.js"></script>
+      </body>
+
+    </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+    <!-- <div class="container">
+      <div id="album-container" class="row">
+        <! <div class="col-md-6">
+          <h2>First Column</h2>
+          <img src="http://unsplash.it/200/200" alt="" />
+        </div> -->
+        <!-- <div class="col-md-6">
+          Second Column
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <script id="photo-album" type ="text/x-handlebars-template">
+    <div class="col-md-6">
+      <h2>{{title}} #{{albumNumber}}</h2>
+      <img src="{{image}}" alt="" />
+
+      <h3>Included Photos </h3>
+      <ul>
+        {{#each photos}}                            <!LOOPS THRU MY ARRAY OF OBJECTS-->
+        <!-- <li><a href="#">{{photoTitle}}</a></li>
+          {{/each}}
+        </ul>
+    </div>
+    <! </script> -->
