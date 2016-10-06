@@ -16,6 +16,14 @@ $navgray: #77777F;
 $border: #E1E3DF;
 $imgfootergray: #9A9A9A;
 
+/*COLORS*/
+$red: #F40B32;
+$orange: #FF7F00;
+$yellow: #F3CC0C;
+$green: #0AC20A;
+$lightblue: #0CCCF3;
+$purple: #A60CF3;
+
 
 *,
 *::before,
@@ -117,9 +125,11 @@ header {
 
 .leftSection {
   text-decoration: none;
-  width: 100%;
+  // width: 200px;
+  // margin-top: 7px;
+  // padding: 5px;
   ul{
-    padding-left: 0px;
+    padding-left: 5px;
   }
   span{
     color: black;
@@ -131,17 +141,45 @@ header {
     color: $blue;
   }
   .firstBox{
+    margin-bottom:25px;
+    width: 200px;
+    margin-top: 7px;
+    margin-left:5px;
+    padding: 7px;
     border: 1px solid $border;
-    // padding:5px;
     background-color: $white;
     border-radius: 1px;
     padding-left: 0px;
     font-family: "Graphik Web","Arial","Helvetica",sans-serif;
 }
+  .yarn {
+    color: #000;
+  }
+  .indent {
+    margin-left:20px;
+  }
+  // li:nth-child(1){
+  //   position: absolute;
+  //   top: 5pt;
+  //   content: "";
+  //   display: inline-block;
+  //   /* By using an em scale, the arrows will size with the font */
+  //   width: 0.4em;
+  //   height: 0.4em;
+  //   border-right: 0.2em solid $blue;
+  //   border-top: 0.2em solid $blue;
+  //   transform: rotate(45deg);
+  // }
+  .refine{
+    margin-top: 10px;
+  }
   li {
     padding: 5px;
   }
   .secondBox {
+    width: 200px;
+    margin-top: 15px;
+    padding: 5px;
     border: 1px solid $border;
     background-color: $white;
     border-radius: 1px;
@@ -149,49 +187,88 @@ header {
     font-family: "Graphik Web","Arial","Helvetica",sans-serif;
     text-align: left;
   }
+  hr {
+    width: 150px;
+  }
   form {
     display: inline-block;
     outline: none;
+    margin-bottom: 10px;
+    margin-left: 5px;
   }
   input {
     width: 40px;
     -webkit-appearance: none;
   }
-  .colors span{
+  .filter{
     font-weight: bold;
-    font-size: 12px;
-    margin-top: 5px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 5px;
   }
   .colors div{
     // display: inline-block;
     width: 20px;
     height: 20px;
     border-radius: 3px;
-  }
-  .colors div:nth-child(0){
-    background: #F40B32;
+    margin-top: 10px;
   }
   .colors div:nth-child(1){
-    background: #FC7E00;
+    background: $red;
+    display: inline-block;
+    margin-left: 5px;
   }
   .colors div:nth-child(2){
-    background: #EFC90C;
+    background: $orange;
+    display: inline-block;
   }
   .colors div:nth-child(3){
-    background: #0ABF0A;
-
+    background: $yellow;
+    display: inline-block;
   }
   .colors div:nth-child(4){
-    background: #A60CF3;
+    background: $green;
+    display: inline-block;
 
   }
   .colors div:nth-child(5){
-    background: #000000;
+    background: $lightblue;
+    display: inline-block;
 
   }
   .colors div:nth-child(6){
+    background: $purple;
+    display: inline-block;
+
+  }
+  .colors div:nth-child(7){
+    background: #000;
+    border: 1px solid $border;
+    display: inline-block;
+  }
+  .colors div:nth-child(8){
     background: $white;
     border: 1px solid $border;
+    display: inline-block;
+  }
+  .orderingOptions {
+    margin-left: 5px;
+  }
+  .firstSpan{
+    font-size: 14px;
+    color: black;
+  }
+  .orderingOptions span{
+    color: $blue;
+  }
+  .orderingOptions div{
+    border: 1px solid $border;
+    background: $white;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    position: inline-block;
+
   }
 }
 
@@ -234,6 +311,7 @@ header {
     width: 100%;
     display: table;
     border:1px solid $border;
+    border-radius: 5px;
   }
   img {
     height: 100%;

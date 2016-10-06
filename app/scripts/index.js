@@ -34,7 +34,7 @@ function listOfProducts(loopProducts){
   var productHTML = $(template(product));
   $('#product-container').append(productHTML);
   // $('.product-container').append(template(product));  -->> class way..
-  console.log(product);
+  // console.log(product);
   });
 };
 
